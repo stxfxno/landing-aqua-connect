@@ -1,0 +1,141 @@
+/* ============================================
+   RESPONSIVE STYLES
+============================================ */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 992px) {
+    .hero .container {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        margin-left: 0;
+    }
+    
+    .two-column {
+        flex-direction: column;
+    }
+    
+    .two-column.reversed {
+        flex-direction: column;
+    }
+    
+    .download .container {
+        flex-direction: column;
+    }
+    
+    .download-content {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .app-buttons {
+        justify-content: center;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .mobile-menu {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
+    }
+    
+    .mobile-menu.active i:before {
+        content: '\f00d';
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .problem-solution-wrapper {
+        flex-direction: column;
+    }
+    
+    .help-card, .help-card.reversed {
+        flex-direction: column;
+    }
+    
+    .help-icon {
+        width: 100%;
+        padding: 30px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .app-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
